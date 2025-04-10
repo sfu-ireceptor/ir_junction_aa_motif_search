@@ -2,7 +2,8 @@ FROM python:3.8
 
 # iReceptor custom changes - we need ZIP
 RUN apt-get update; \
-    apt-get install -y zip
+    apt-get install -y zip; \
+    apt-get install -y jq
 
 # add this folder to the Docker image
 COPY . /ireceptor
